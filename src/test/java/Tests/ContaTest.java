@@ -2,6 +2,7 @@ package Tests;
 
 import Core.BaseTest;
 import Core.Driverfactory;
+import Core.Propriedades;
 import Pages.ContasPage;
 import Pages.InicialPage;
 import Pages.MenuPage;
@@ -37,7 +38,7 @@ public class ContaTest extends BaseTest {
 
         contasPage.clicarAlterarConta("Conta do Teste");
 
-        contasPage.setNome("Conta do Teste alterada");
+        contasPage.setNome(Propriedades.NOME_CONTA_ALTERADA);
         contasPage.salvar();
 
         Assert.assertEquals("Conta alterada com sucesso!", contasPage.obterMensagemSucesso());
@@ -47,7 +48,7 @@ public class ContaTest extends BaseTest {
     public void test3_InserirContaMesmoNome(){
         menuPage.acessarTelaInserirConta();
 
-        contasPage.setNome("Conta do Teste alterada2");
+        contasPage.setNome(Propriedades.NOME_CONTA_ALTERADA);
         contasPage.salvar();
 
         Assert.assertEquals("Já existe uma conta com esse nome!", contasPage.obterMensagemErro());

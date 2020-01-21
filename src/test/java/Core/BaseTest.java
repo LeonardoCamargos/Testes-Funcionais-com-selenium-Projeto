@@ -19,25 +19,10 @@ import static Core.Driverfactory.killDriver;
 
 public class BaseTest {
 
-    private InicialPage page = new InicialPage();
-
 
     @Rule
     public TestName testName = new TestName();
 
-    @Before
-
-    public void inicializa(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\lcamargo\\drivers\\chromedriver.exe");
-        Driverfactory.getDriver().get("https://srbarriga.herokuapp.com/login");
-        page = new InicialPage();
-
-        page.acessarTelaInicial();
-        page.setEmail("leo@teste.com.br");
-        page.setSenha("1234567");
-        page.entrar();
-
-    }
 
 
     @After

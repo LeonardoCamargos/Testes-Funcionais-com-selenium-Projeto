@@ -1,6 +1,7 @@
 package Tests;
 
 import Core.BaseTest;
+import Core.Propriedades;
 import Pages.MenuPage;
 import Pages.MovimentacaoPage;
 import org.junit.Assert;
@@ -30,7 +31,7 @@ public class MovimentacaoTest extends BaseTest {
         movPage.setDescricao("Movimentação do Teste");
         movPage.setInteressado("Interessado Qualquer");
         movPage.setValor("500");
-        movPage.setConta("Conta do Teste alterada");
+        movPage.setConta(Propriedades.NOME_CONTA_ALTERADA);
         movPage.setStatusPago();
         movPage.salvar();
 
@@ -63,7 +64,7 @@ public class MovimentacaoTest extends BaseTest {
         movPage.setDescricao("Movimentação do Teste");
         movPage.setInteressado("Interessado Qualquer");
         movPage.setValor("500");
-        movPage.setConta("Conta do Teste alterada");
+        movPage.setConta(Propriedades.NOME_CONTA_ALTERADA);
         movPage.setStatusPago();
         movPage.salvar();
 
